@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Bestellung</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div class="header0">Bestellung</div>  
+  
+  <div class="grid-order">
+    
+  
+
+     <div class="order1">
+
+     <img src="../pics/margherita.png">  Marghertia  5.00€ <br>
+     <img src="../pics/salami.png">  Salami  6.50€<br>
+     <img src="../pics/hawai.png"> Hawai  7.50€<br>
+     <img src="../pics/tonno.png "> Tonno  9.00€<br>
+ </div>
+
+    <div class="order2"> 
+          <form id="form_bestellung" name="bestellung" action="http://www.fbi.h-da.de/cgi-bin/Echo.pl" method="post">
+            <h2>Warenkorb</h2>
+           
+              <select id="select_warenkorb" name="warenkorb[]" class="waren" size="11" multiple>
+              </select>
+              <input class="auswahl" type="button" value="Auswahl löschen" onclick="resetAuswahl();" />
+           
+         
+              <h2>Adresse:</h2>
+                <input type="text" name ="adresse" class="adresse" maxlength="40" placeholder="Name, PLZ und Straße"/>
+           
+      
+          <p>Betrag: <label id="betrag"> </label> </p> </br>
+          <input class="submit" type="button" value="Bestellen" onclick="submitForm();"/>
+          <input class="reset" type="button" value="Zurücksetzen" onclick="resetForm();"/>
+                  </form>
+                </div>
+     
+    
+  </div>
+
+
+
+  
+  
+</body>
+</html>
